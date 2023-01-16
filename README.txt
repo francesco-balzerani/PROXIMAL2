@@ -1,8 +1,8 @@
 PROXIMAL2
 
-==========================================================================================================================================================
+============================================================================================
 1. INPUT GENERATION
-==========================================================================================================================================================
+============================================================================================
 
 GenerateInput.py: script to generate the metabolite and reaction files to generate the operators. The queries need to be created separately and indipendently.
 					It analyzes the reactions and remove the cofactors from the substrates and products.
@@ -21,9 +21,9 @@ GenerateInput.py: script to generate the metabolite and reaction files to genera
 						- reachableMolecules.csv: .csv containing the structures of the molecules included in the templates.
 						- templateReactions.csv: .csv having the definition of the reaction templates.
 						
-==========================================================================================================================================================
+============================================================================================
 2. ENZYME PROMISCUITY ANALYSIS
-==========================================================================================================================================================
+============================================================================================
 
 runPROX2.py : main script to run that import all the needed functions
 
@@ -33,9 +33,9 @@ In proximal_functions folder there are 4 code files:
 	- GenerateMolFiles2: to create the predicted products.
 	- Common2: collect few functions needed in the other steps.
 
-==========================================================================================================================================================
+============================================================================================
 INPUT
-==========================================================================================================================================================
+============================================================================================
 
 In the APPLICATION FILES section there is the files import.
 	- molecules_of_interest = queries of interest. Defined in a .csv file with no header and the tabulator as separator.
@@ -48,9 +48,9 @@ Moreover, there is the definition of the pathways for the outputs (operators and
 	- OUTPUT_DIRECTORY: pathway to product output folder.
 	- path_finalReactions: pathway where to store the final list of compound pairs.
 
-==========================================================================================================================================================
+============================================================================================
 OUTPUT
-==========================================================================================================================================================
+============================================================================================
 
 There will be create a folder for any query of interest label with the generated ID "MetX", where X represents the number corresponding to the counting of the queries.
 Within the folder of the query, there will be created the folders containing the products related to any applied pair.
@@ -69,25 +69,25 @@ Any product output within the folder of the related pair is defined in json form
 			- ID: ID of the molecule query.
 			- smiles: original Smiles of the query.
 
-==========================================================================================================================================================
+============================================================================================
 STEPS
-==========================================================================================================================================================
+============================================================================================
 
 	- ExtractPairs: pair extraction to generate the proper association and redundancy removal (in the input folder will be saved the definitive list of reaction pairs.)
 	- GenerateOperators: operators generation.
 	- GenerateProducts: check possible application to query.
 	- GenerateMolFiles: generate the final product.
 
-==========================================================================================================================================================
+============================================================================================
 FILES INCLUDED
-==========================================================================================================================================================
+============================================================================================
 
 In the input file are present the following files and folder:
 	- cofactors: .csv file including name and inchi of some cofactors, to remove them from the reactions.
  
-==========================================================================================================================================================
+============================================================================================
 REQUIREMENTS
-==========================================================================================================================================================
+============================================================================================
 
 To run the whole algorithm there are needed the following dependencies:
 	- rdkit
