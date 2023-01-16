@@ -27,11 +27,6 @@ path_finalReactions = "./test/TESTinput/"
 # The molecule of interest must have the structure expressed in smiles.
 # It is implemented to accept a csv with tabulator as separator.
 # molecules_of_interest = pd.read_csv("./input/XXXX.csv", sep = "\t")
-
-# Considering our file "PhenolicCompoundsQueries", the file was built with no header and inchi
-# instead of smiles. Therefore, the file is coherently loaded and the smiles are created by RDKit.
-# molecules_of_interest = pd.read_csv("./input/PhenolicCompoundsQueries.csv", sep = "\t", header = None,
-#                                     names = ['name', 'Inchi'])
 # molecules_of_interest['smiles'] = [Chem.MolToSmiles(Chem.MolFromInchi(x)) for x in molecules_of_interest['Inchi']]
 # molecules_of_interest['ID'] = ['Met'+str(x) for x in range(len(molecules_of_interest['name']))]
 
